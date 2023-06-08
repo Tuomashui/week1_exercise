@@ -11,26 +11,32 @@
       }
     </script>
   </head>
+  
+  
   <body>
     <div id="app"></div>
     <h1 id="teksti">Hello world</h1>
+    
     <button id="my-button" onclick="changetext()">
       nappi
     </button>
     
     <ul id="unordered_list">
-      uno_list = [];
+      <li> </li>
       </ul>
   
     <button id="add-data" onclick="addToUnoList()">
       toinen nappi
     </button>
-    <script>
-      function addToUnoList(){
+  
+  <script>
+      function addToUnoList() {
         let ul = document.getElementById("unordered_list");
-        let li = createElement("mielivaltainenteksti");
-        ul.AppendChild.(li);
-        
+        let li = document.createElement("li");
+        let text = document.createTextNode("MIelivaltainen teksti");
+        li.appendChild(text);
+        ul.appendChild(li);
       }
+      </script>
   </body>
 </html>

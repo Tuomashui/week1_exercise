@@ -9,19 +9,30 @@
   teksti.innerHTML = "My notebook";
 }</script>
   </head>
+  
+  
   <body>
     <div id="app"></div>
     <h1 id="teksti">Hello world</h1>
+    
     <button id="my-button" onclick="changetext()">
       nappi
     </button>
     
     <ul id="unordered_list">
-      uno_list = [];
+      <li> </li>
       </ul>
   
-    <button id="add-data" onclick="addToUnoList()">      toinen nappi
+    <button id="add-data" onclick="addToUnoList()">
+      toinen nappi
     </button>
+  
+  <script>function addToUnoList() {
+  var ul = document.getElementById("unordered_list");
+  var li = document.createElement("li");
+  var text = document.createTextNode("MIelivaltainen teksti");
+  li.appendChild(text);
+  ul.appendChild(li);
+}</script>
   </body>
-
 </html>
