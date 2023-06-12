@@ -27,13 +27,14 @@
     <button id="add-data" onclick="addToUnoList()">
       toinen nappi
     </button>
+    
+    <textarea id="textArea"></textarea>
   
   <script>
       function addToUnoList() {
         let ul = document.getElementById("unordered_list");
         let li = document.createElement("li");
-        let text = document.createTextNode("MIelivaltainen teksti");
-        li.appendChild(text);
+        li.innerText = document.getElementById("textArea").value;
         ul.appendChild(li);
       }
       </script>
